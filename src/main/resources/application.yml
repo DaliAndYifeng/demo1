@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    #数据库用户名和密码
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/postgres
+    #最后面的是你的数据库名字
+    #加载驱动
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: dyhtest
+server:
+  port: 8080
+  # 下面这个参数是为解决问题而新增的
+  tomcat:
+    max-http-post-size: 8192
+
+
+mybatis-plus:
+  mapper-locations: com/example/demo1/mapper/*.xml
